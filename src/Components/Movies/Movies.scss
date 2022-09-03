@@ -1,0 +1,19 @@
+@import './../../Common/colors.scss';
+
+
+.movieWrapper{
+
+}
+.movieList{
+    margin: 20px 0;
+    h2{
+        color: $font-secondary;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+}
+.movieContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 15px;
+}
