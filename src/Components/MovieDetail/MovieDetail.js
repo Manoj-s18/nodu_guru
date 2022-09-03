@@ -19,6 +19,10 @@ function MovieDetail() {
 
   return (
     <div className='movieSection'>
+      {Object.keys(data).length === 0?
+      <div>
+        ........Loading
+      </div>:(<>
       <div className='sectionLeft'>
         <div className='movieTitle'>{data.Title}</div>
         <div className='movieRating'>
@@ -63,7 +67,9 @@ function MovieDetail() {
       <div className='sectionRight'>
           <img src={data.Poster} alt = {data.Title} />
         </div>
-      
+      </>
+      )
+      }
     </div>
   )
 }
