@@ -10,8 +10,42 @@
         color: $font-secondary;
         font-weight: 400;
         margin-bottom: 10px;
+        font-size: xx-large;
     }
 }
+.searchParam{
+    display: flex;
+    justify-content: space-around;
+    // margin: 10px;
+
+}
+.searchDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // margin-left: 50%;
+    background-color: white;
+    margin-bottom: 10px;
+    
+}
+.searchDiv > input,i{
+margin: 3px;
+font-size: 20px;
+border:none;
+outline-width: 0;
+}
+
+@media (max-width:768px){
+    
+    .searchDiv > input,i{
+        margin: 3px;
+        font-size: 10px;
+        border:none;
+        outline-width: 0;
+        }
+}
+
+
 // .movieContainer{
 //     display: grid;
 //     grid-template-columns: repeat(auto-fill,minmax(220px,1fr));

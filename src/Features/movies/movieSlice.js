@@ -1,14 +1,14 @@
 import {createSlice,createAsyncThunk} from '@reduxjs/toolkit'
 import axios from 'axios'
 
-export const fetchMovies = createAsyncThunk('NoduGuru/fetchMovies',async ()=>{
-    const response = await axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=94f8134b&s=joker&type=movie')
+export const fetchMovies = createAsyncThunk('NoduGuru/fetchMovies',async (search='joker')=>{
+    const response = await axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=94f8134b&s=${search}&type=movie`)
     console.log("api data",response.data);
     return response.data;
 })
 
-export const fetchShows = createAsyncThunk('NoduGuru/fetchShows',async ()=>{
-    const response = await axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=94f8134b&s=joker&type=series')
+export const fetchShows = createAsyncThunk('NoduGuru/fetchShows',async (search='joker')=>{
+    const response = await axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=94f8134b&s=${search}&type=series`)
     console.log("api data",response.data);
     return response.data;
 })

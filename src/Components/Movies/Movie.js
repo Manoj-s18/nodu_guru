@@ -9,6 +9,7 @@ import './Movies.scss'
 function Movie() {
   const movies = useSelector(getAllMovies);
   const shows = useSelector(getAllShows);
+  
   console.log(shows);
 
   // console.log(" movies before api call",movies);
@@ -33,13 +34,25 @@ function Movie() {
   return (
     <div className='movieWrapper'>
       <div className='movieList'>
+        <div className='searchParam'>
         <h2>Movies</h2>
+        <div className='searchDiv'>
+          <i className='fa fa-search'></i>
+          <input type='text'></input>
+        </div>
+        </div>
         <div className='movieContainer'>
            <Slider {...settings}  >{renderMovies} </Slider> 
         </div>
       </div>
       <div className='movieList'>
+      <div className='searchParam'>
         <h2>Series</h2>
+        <div className='searchDiv'>
+          <i className='fa fa-search'></i>
+          <input type='text'></input>
+        </div>
+        </div>
         <div className='movieContainer'>
            <Slider {...settings}> {renderShows} </Slider>
         </div>
